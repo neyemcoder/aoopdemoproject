@@ -1,14 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.raven.demoproject.ProfileController">
+    <children>
 
+        <ImageView fitHeight="768.0" fitWidth="1366.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <image>
+                <Image url="@raven.jpg" />
+            </image>
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor></ImageView>
+
+        <Label layoutX="551.0" layoutY="326.0" text="Location:" textFill="WHITE" AnchorPane.leftAnchor="551.0" AnchorPane.topAnchor="326.0">
+            <font>
+                <Font name="Calibri Light" size="24.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="locationField" layoutX="666.0" layoutY="316.0" prefHeight="45.0" prefWidth="528.0" stylesheets="@application.css" text="United International University" AnchorPane.leftAnchor="666.0" AnchorPane.topAnchor="316.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+            <styleClass>
+                <String fx:value="text-field-profile" />
+                <String fx:value="text-field" />
+            </styleClass>
+        </TextField>
+
+        <Label layoutX="481.0" layoutY="386.0" text="Mobile Number:" textFill="WHITE" AnchorPane.leftAnchor="481.0" AnchorPane.topAnchor="386.0">
+            <font>
+                <Font name="Calibri Light" size="24.0" />
+            </font></Label>
+
+        <TextField fx:id="mobileNumberField" layoutX="667.0" layoutY="379.0" prefHeight="45.0" prefWidth="532.0" styleClass="text-field-profile" stylesheets="@application.css" text="017********" AnchorPane.leftAnchor="666.0" AnchorPane.topAnchor="379.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </TextField>
+
+        <Label layoutX="575.0" layoutY="443.0" prefHeight="41.0" prefWidth="120.0" text="E-mail:" textFill="#fffbfb" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="443.0">
+            <font>
+                <Font name="Calibri Light" size="24.0" />
+            </font></Label>
+
+        <TextField fx:id="emailField" layoutX="666.0" layoutY="441.0" prefHeight="45.0" prefWidth="533.0" styleClass="text-field-profile" stylesheets="@application.css" text="sfjdjfk@dkjkd" AnchorPane.leftAnchor="666.0" AnchorPane.topAnchor="441.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </TextField>
+
+        <Button fx:id="changePassword" layoutX="600.0" layoutY="645.0" opacity="0.9" prefHeight="41.0" prefWidth="194.0" styleClass="button-control-profile" stylesheets="@application.css" text="Change Password" AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="645.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <Button fx:id="LogOutButton" layoutX="1030.0" layoutY="651.0" onAction="#LogOut" onMouseClicked="#LogOut" opacity="0.9" prefHeight="41.0" prefWidth="194.0" styleClass="button-control-profile" stylesheets="@application.css" text="Log Out" AnchorPane.leftAnchor="1030.0" AnchorPane.topAnchor="651.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#26384a" height="768.0" layoutX="-2.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="1074.0" AnchorPane.topAnchor="0.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#26384a" height="768.0" layoutX="-2.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="59.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1309.0" AnchorPane.topAnchor="0.0" />
+        <Label layoutX="357.0" layoutY="259.0" prefHeight="28.0" prefWidth="108.0" text="User Info" textFill="WHITE" AnchorPane.leftAnchor="357.0" AnchorPane.topAnchor="259.0">
+            <font>
+                <Font name="Times New Roman" size="24.0" />
+            </font>
+        </Label>
+        <!-- Navigation Icons -->
+        <ImageView fitHeight="53.0" fitWidth="47.0" layoutX="4.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@profile.png" />
+            </image>
+        </ImageView>
+
+        <ImageView fitHeight="47.0" fitWidth="59.0" layoutX="4.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@dashboard.png" />
+            </image>
+        </ImageView>
+
+        <ImageView fitHeight="47.0" fitWidth="70.0" layoutX="6.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@devices.png" />
+            </image>
+        </ImageView>
+
+        <ImageView fitHeight="53.0" fitWidth="77.0" layoutX="3.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="759.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="1225.0" AnchorPane.topAnchor="90.0">
+            <image>
+                <Image url="@squad.png" />
+            </image>
+        </ImageView>
+
+
+        <!-- Navigation Buttons -->
+        <Button fx:id="Profile" layoutX="64.0" layoutY="203.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="204.0" style="-fx-alignment: left;" styleClass="button-control-profile" stylesheets="@application.css" text="Profile" textFill="#f4bf4f" />
+        <Button fx:id="DashBoard" layoutX="64.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleDashBoard" prefHeight="41.0" prefWidth="204.0" style="-fx-alignment: left;" styleClass="button-control-profile-off" stylesheets="@application.css" text="Dash Board" textFill="#f4bf4f" />
+        <Button fx:id="Devices" layoutX="64.0" layoutY="405.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="204.0" style="-fx-alignment: left;" styleClass="button-control-profile-off" stylesheets="@application.css" text="Devices" textFill="#f4bf4f" />
+        <Button fx:id="chatBox" layoutY="639.0" mnemonicParsing="false" onAction="#handleChatButtonAction" onMouseClicked="#handleChatButtonAction" prefHeight="53.0" prefWidth="59.0" styleClass="Button-Chat-box" stylesheets="@application.css" text="Chat" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="640.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+         <font>
+            <Font name="System Bold" size="8.0" />
+         </font></Button>
+      <Circle fill="#1f93ff31" layoutX="917.0" layoutY="150.0" radius="54.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <ImageView fitHeight="94.0" fitWidth="89.0" layoutX="876.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="876.0" AnchorPane.topAnchor="103.0">
+         <image>
+            <Image url="@al jazari.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="826.0" layoutY="236.0" prefHeight="4.0" prefWidth="204.0" text="Welcome, Al Jazari" textFill="WHITE" AnchorPane.leftAnchor="826.0" AnchorPane.topAnchor="236.0">
+         <font>
+            <Font name="Calibri Light" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailField1" layoutX="665.0" layoutY="504.0" prefHeight="45.0" prefWidth="533.0" styleClass="text-field-profile" stylesheets="@application.css" text="Male">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="566.0" layoutY="506.0" prefHeight="41.0" prefWidth="120.0" text="Gender:" textFill="#fffbfb">
+         <font>
+            <Font name="Calibri Light" size="24.0" />
+         </font>
+      </Label>
+    </children>
 </AnchorPane>

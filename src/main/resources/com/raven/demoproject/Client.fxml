@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane  xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.raven.demoproject.ClientController">
+    <Label text="Client Application" layoutX="10.0" layoutY="10.0" style="-fx-font-size: 18px;"/>
+    <TextField fx:id="nameField" layoutX="10.0" layoutY="40.0" promptText="Enter your name"/>
+    <Button fx:id="connectButton" text="Connect to Server" layoutX="10.0" layoutY="80.0" onAction="#connectToServer"/>
+    <ListView fx:id="messageList" layoutX="10.0" layoutY="120.0" prefHeight="200.0" prefWidth="280.0"/>
+    <TextField fx:id="messageField" layoutX="10.0" layoutY="330.0" promptText="Enter message"/>
+    <Button text="Send" layoutX="240.0" layoutY="370.0" onAction="#sendMessage"/>
+</AnchorPane>
