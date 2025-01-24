@@ -11,7 +11,7 @@ public class signUp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(signUp.class.getResource("SignIn.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(signUp.class.getResource("signUp-view.fxml"));
             Scene scene_signUp = new Scene(fxmlLoader.load(), 1366,768);
             String css = this.getClass().getResource("application.css").toExternalForm();
             scene_signUp.getStylesheets().add(css);

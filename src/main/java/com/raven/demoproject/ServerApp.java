@@ -1,4 +1,4 @@
-package com.raven.messenger;
+package com.raven.demoproject;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:controller="com.raven.messenger.ServerController" xmlns:fx="http://javafx.com/fxml">
+<AnchorPane fx:controller="com.raven.demoproject.ServerController" xmlns:fx="http://javafx.com/fxml">
     <Label text="Server Application" layoutX="10.0" layoutY="10.0" style="-fx-font-size: 18px;"/>
     <Button text="Start Server" layoutX="10.0" layoutY="40.0" onAction="#startServer"/>
     <ListView fx:id="clientList" layoutX="10.0" layoutY="80.0" prefHeight="100.0" prefWidth="280.0"/>

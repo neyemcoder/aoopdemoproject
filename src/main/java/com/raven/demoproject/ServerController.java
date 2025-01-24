@@ -1,4 +1,4 @@
-package com.raven.messenger;
+package com.raven.demoproject;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

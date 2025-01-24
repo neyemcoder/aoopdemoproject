@@ -22,13 +22,13 @@
                 <Image url="@raven.jpg" />
             </image></ImageView>
 <!--        Rectangle Shade-->
-        <Rectangle arcHeight="90.0" arcWidth="90.0" fill="#0c1f2fd4" height="582.0" layoutX="47.0" layoutY="105.0" opacity="0.81" stroke="#0f143c" strokeType="INSIDE" strokeWidth="0.0" width="1095.0" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="136.0" AnchorPane.topAnchor="93.0">
+        <Rectangle arcHeight="90.0" arcWidth="90.0" fill="#0c1f2fd4" height="582.0" layoutX="147.0" layoutY="93.0" opacity="0.81" stroke="#0f143c" strokeType="INSIDE" strokeWidth="0.0" width="1095.0" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="147.0" AnchorPane.rightAnchor="124.0" AnchorPane.topAnchor="93.0">
             <cursor>
                 <Cursor fx:constant="DEFAULT" />
             </cursor>
         </Rectangle>
 <!--        User name text-->
-        <TextField fx:id="usernameField" layoutX="447.0" layoutY="252.0" prefHeight="66.0" prefWidth="512.0" promptText="Enter User-Name" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="252.0">
+        <TextField fx:id="usernameField" layoutX="447.0" layoutY="219.0" prefHeight="66.0" prefWidth="512.0" promptText="Enter User-Name" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="219.0">
             <padding>
                 <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
             </padding>
@@ -38,27 +38,27 @@
         </TextField>
 
 <!--        emailTextField-->
-        <TextField fx:id="emailField" layoutX="447.0" layoutY="332.0" prefHeight="66.0" prefWidth="512.0" promptText="Enter Email" AnchorPane.bottomAnchor="370.0" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="332.0">
+        <TextField fx:id="emailField" layoutX="447.0" layoutY="292.0" prefHeight="66.0" prefWidth="512.0" promptText="Enter Email" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="292.0">
             <padding>
                 <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
             </padding>
             <font>
                 <Font size="24.0" />
             </font></TextField>
-        <Label layoutX="345.0" layoutY="347.0" text="Email:" textFill="WHITE" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="347.0">
+        <Label layoutX="346.0" layoutY="308.0" text="Email:" textFill="WHITE" AnchorPane.leftAnchor="346.0" AnchorPane.topAnchor="308.0">
             <font>
                 <Font size="24.0" />
             </font></Label>
 
 <!--        passwordField-->
-        <PasswordField fx:id="passwordField" layoutX="448.0" layoutY="412.0" prefHeight="66.0" prefWidth="512.0" promptText="Enter Password" AnchorPane.bottomAnchor="290.0" AnchorPane.leftAnchor="448.0" AnchorPane.topAnchor="412.0">
+        <PasswordField fx:id="passwordField" layoutX="447.0" layoutY="438.0" prefHeight="66.0" prefWidth="512.0" promptText="Enter Password">
             <padding>
                 <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
             </padding>
             <font>
                 <Font size="24.0" />
             </font></PasswordField>
-        <Label layoutX="300.0" layoutY="269.0" prefHeight="41.0" prefWidth="120.0" text="Password:" textFill="#fffbfb" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="269.0">
+        <Label layoutX="306.0" layoutY="451.0" prefHeight="41.0" prefWidth="120.0" text="Password:" textFill="#fffbfb" AnchorPane.leftAnchor="306.0" AnchorPane.topAnchor="451.0">
             <font>
                 <Font size="24.0" />
             </font></Label>
@@ -84,16 +84,31 @@
             <Font name="System Bold" size="37.0" />
          </font>
       </Label>
-      <Label layoutX="288.0" layoutY="416.0" text="User Name:" textFill="WHITE" AnchorPane.leftAnchor="288.0" AnchorPane.topAnchor="416.0">
+      <Label layoutX="284.0" layoutY="235.0" text="User Name:" textFill="WHITE" AnchorPane.leftAnchor="284.0" AnchorPane.topAnchor="235.0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
+
+
       <RadioButton fx:id="mButton" layoutX="460.0" layoutY="517.0" mnemonicParsing="false" onAction="#getGender" text="Male" textFill="#f8e800" />
       <RadioButton fx:id="fButton" layoutX="589.0" layoutY="518.0" mnemonicParsing="false" onAction="#getGender" text="Female" textFill="#f8e800" />
       <Label layoutX="539.0" layoutY="515.0" prefHeight="27.0" prefWidth="37.0" text="Or" textFill="WHITE">
          <font>
             <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="phoneNumberField" layoutX="447.0" layoutY="365.0" prefHeight="66.0" prefWidth="512.0" promptText="Enter Phone Number" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="365.0">
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Label layoutX="300.0" layoutY="381.0" prefHeight="35.0" prefWidth="132.0" text="Phone No:" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
          </font>
       </Label>
 

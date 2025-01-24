@@ -24,7 +24,11 @@ public class signUpController {
     private PasswordField passwordField;
 
     @FXML
+    private TextField phoneNumberField;
+
+    @FXML
     private TextField emailField;
+
 
     @FXML
     public Button getSignUpButton;
