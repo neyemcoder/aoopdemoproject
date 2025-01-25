@@ -14,7 +14,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.raven.demoproject.signInController">
     <children>
-        <ImageView fx:id="backgroundImage" fitHeight="768.0" fitWidth="1366.0" layoutX="-39.0" layoutY="-16.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <ImageView fx:id="backgroundImage" fitHeight="768.0" fitWidth="1366.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <image>
                 <Image url="@raven.jpg" />
             </image></ImageView>
@@ -23,22 +23,22 @@
                 <Cursor fx:constant="DEFAULT" />
             </cursor>
         </Rectangle>
-        <TextField fx:id="usernameField" layoutX="447.0" layoutY="304.0" prefHeight="66.0" prefWidth="512.0" promptText="Enter Email" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="304.0">
+        <TextField fx:id="usernameField" layoutX="447.0" layoutY="304.0" prefHeight="54.0" prefWidth="501.0" promptText="Enter Email" styleClass="text-field" stylesheets="@application.css" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="304.0">
             <padding>
                 <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
             </padding>
             <font>
                 <Font size="24.0" />
             </font></TextField>
-        <Label layoutX="349.0" layoutY="319.0" text="Email:" textFill="WHITE" AnchorPane.leftAnchor="349.0" AnchorPane.topAnchor="319.0">
+        <Label layoutX="349.0" layoutY="319.0" text="Email:" textFill="WHITE" AnchorPane.leftAnchor="349.0" AnchorPane.topAnchor="438.0">
             <font>
                 <Font size="24.0" />
             </font></Label>
-        <Label layoutX="307.0" layoutY="449.0" prefHeight="41.0" prefWidth="120.0" text="Password:" textFill="#fffbfb" AnchorPane.leftAnchor="307.0" AnchorPane.topAnchor="449.0">
+        <Label layoutX="307.0" layoutY="449.0" prefHeight="41.0" prefWidth="120.0" text="Password:" textFill="#fffbfb" AnchorPane.leftAnchor="307.0" AnchorPane.topAnchor="304.0">
             <font>
                 <Font size="24.0" />
             </font></Label>
-        <PasswordField fx:id="passwordField" layoutX="447.0" layoutY="438.0" prefHeight="66.0" prefWidth="512.0" promptText="Enter Password" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="438.0">
+        <PasswordField fx:id="passwordField" layoutX="447.0" layoutY="438.0" prefHeight="54.0" prefWidth="501.0" promptText="Enter Password" styleClass="text-field" stylesheets="@application.css" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="438.0">
             <padding>
                 <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
             </padding>
@@ -51,7 +51,7 @@
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor></Button>
-        <Button fx:id="signInButton" layoutX="447.0" layoutY="561.0" onAction="#handleSignIn" onMouseClicked="#handleSignIn" prefHeight="25.0" prefWidth="512.0" styleClass="ButtonSS" stylesheets="@application.css" text="Sign In" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="561.0">
+        <Button fx:id="signInButton" layoutX="447.0" layoutY="561.0" onAction="#handleSignIn" onMouseClicked="#handleSignIn" prefHeight="25.0" prefWidth="501.0" styleClass="ButtonSS" stylesheets="@application.css" text="Sign In" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="561.0">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>

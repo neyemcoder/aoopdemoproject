@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import java.lang.String?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -16,101 +16,105 @@
 <AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.raven.demoproject.signUpController">
     <children>
 
-<!--        backGroundImage-->
-        <ImageView fx:id="backgroundImage" fitHeight="768.0" fitWidth="1366.0" layoutX="6.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <!-- Background Image -->
+        <ImageView fx:id="backgroundImage" fitHeight="768.0" fitWidth="1366.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <image>
                 <Image url="@raven.jpg" />
-            </image></ImageView>
-<!--        Rectangle Shade-->
-        <Rectangle arcHeight="90.0" arcWidth="90.0" fill="#0c1f2fd4" height="582.0" layoutX="147.0" layoutY="93.0" opacity="0.81" stroke="#0f143c" strokeType="INSIDE" strokeWidth="0.0" width="1095.0" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="147.0" AnchorPane.rightAnchor="124.0" AnchorPane.topAnchor="93.0">
-            <cursor>
-                <Cursor fx:constant="DEFAULT" />
-            </cursor>
-        </Rectangle>
-<!--        User name text-->
-        <TextField fx:id="usernameField" layoutX="447.0" layoutY="219.0" prefHeight="66.0" prefWidth="512.0" promptText="Enter User-Name" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="219.0">
-            <padding>
-                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-            </padding>
+            </image>
+        </ImageView>
+
+        <!-- Rectangle Shade -->
+        <Rectangle arcHeight="90.0" arcWidth="90.0" fill="#0c1f2fd4" height="582.0" layoutX="147.0" layoutY="93.0" opacity="0.81" stroke="#0f143c" strokeType="INSIDE" strokeWidth="0.0" width="1095.0" />
+
+        <!-- Header -->
+        <Label layoutX="202.0" layoutY="105.0" text="Sign Up" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="37.0" />
+            </font>
+        </Label>
+
+        <!-- Username Field -->
+        <Label layoutX="284.0" layoutY="235.0" text="User Name:" textFill="WHITE" AnchorPane.leftAnchor="284.0" AnchorPane.topAnchor="220.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="usernameField" layoutX="440.0" layoutY="220.0" prefHeight="54.0" prefWidth="501.0" promptText="Enter User-Name" styleClass="text-field" stylesheets="@application.css" AnchorPane.leftAnchor="438.0" AnchorPane.topAnchor="220.0">
             <font>
                 <Font size="24.0" />
             </font>
         </TextField>
 
-<!--        emailTextField-->
-        <TextField fx:id="emailField" layoutX="447.0" layoutY="292.0" prefHeight="66.0" prefWidth="512.0" promptText="Enter Email" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="292.0">
-            <padding>
-                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-            </padding>
+        <!-- Email Field -->
+        <Label layoutX="346.0" layoutY="308.0" text="Email:" textFill="WHITE" AnchorPane.topAnchor="290.0">
             <font>
                 <Font size="24.0" />
-            </font></TextField>
-        <Label layoutX="346.0" layoutY="308.0" text="Email:" textFill="WHITE" AnchorPane.leftAnchor="346.0" AnchorPane.topAnchor="308.0">
+            </font>
+        </Label>
+        <TextField fx:id="emailField" layoutX="438.0" layoutY="293.0" prefHeight="50.0" prefWidth="501.0" promptText="Enter Email" styleClass="text-field" stylesheets="@application.css" AnchorPane.leftAnchor="438.0" AnchorPane.topAnchor="290.0">
             <font>
                 <Font size="24.0" />
-            </font></Label>
+            </font>
+        </TextField>
 
-<!--        passwordField-->
-        <PasswordField fx:id="passwordField" layoutX="447.0" layoutY="438.0" prefHeight="66.0" prefWidth="512.0" promptText="Enter Password">
-            <padding>
-                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-            </padding>
+        <!-- Phone Number Field -->
+        <Label layoutX="300.0" layoutY="381.0" text="Phone No:" textFill="WHITE" AnchorPane.topAnchor="360.0">
             <font>
                 <Font size="24.0" />
-            </font></PasswordField>
-        <Label layoutX="306.0" layoutY="451.0" prefHeight="41.0" prefWidth="120.0" text="Password:" textFill="#fffbfb" AnchorPane.leftAnchor="306.0" AnchorPane.topAnchor="451.0">
+            </font>
+        </Label>
+        <TextField fx:id="phoneNumberField" layoutX="438.0" layoutY="369.0" prefHeight="50.0" prefWidth="501.0" promptText="Enter Phone Number" styleClass="text-field" stylesheets="@application.css" AnchorPane.leftAnchor="438.0" AnchorPane.topAnchor="360.0">
             <font>
                 <Font size="24.0" />
-            </font></Label>
-<!--        SignUpButton-->
-      <Button fx:id="getSignUpButton" layoutX="449.0" layoutY="571.0" prefHeight="25.0" prefWidth="512.0" styleClass="ButtonSS" stylesheets="@application.css" text="Sign Up">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-<!--back button-->
-        <Button fx:id="backButton" layoutX="715.0" layoutY="623.0" onAction="#handleBack" onMouseClicked="#handleBack" prefHeight="25.0" prefWidth="62.0" styleClass="tButton" stylesheets="@application.css" text="Sign In">
+            </font>
+        </TextField>
+
+        <!-- Password Field -->
+        <Label layoutX="306.0" layoutY="451.0" text="Password:" textFill="WHITE" AnchorPane.topAnchor="430.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <PasswordField fx:id="passwordField" layoutX="438.0" layoutY="441.0" prefHeight="50.0" prefWidth="501.0" promptText="Enter Password" styleClass="text-field" stylesheets="@application.css" AnchorPane.leftAnchor="438.0" AnchorPane.topAnchor="430.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </PasswordField>
+
+        <!-- Gender Radio Buttons -->
+        <Label layoutX="356.0" layoutY="507.0" text="Gender:" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="mButton" layoutX="460.0" layoutY="517.0" mnemonicParsing="false" text="Male" textFill="#f8e800" />
+        <RadioButton fx:id="fButton" layoutX="589.0" layoutY="517.0" mnemonicParsing="false" text="Female" textFill="#f8e800" />
+
+        <!-- Error/Success Message -->
+        <Label fx:id="getMyLabel" layoutX="480.0" layoutY="142.0" prefHeight="17.0" prefWidth="429.0" textFill="WHITE" />
+
+        <!-- Sign-Up Button -->
+        <Button fx:id="getSignUpButton" layoutX="449.0" layoutY="571.0" onAction="#handleSignUp" prefHeight="25.0" prefWidth="501.0" styleClass="ButtonSS" stylesheets="@application.css" text="Sign Up" AnchorPane.leftAnchor="438.0" AnchorPane.topAnchor="571.0">
             <cursor>
                 <Cursor fx:constant="HAND" />
-            </cursor></Button>
+            </cursor>
+        </Button>
 
-      <Label layoutX="508.0" layoutY="622.0" prefHeight="27.0" prefWidth="224.0" text="Already Have an Account?" textFill="WHITE">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="202.0" layoutY="105.0" prefHeight="118.0" prefWidth="153.0" text="Sign Up" textFill="WHITE" AnchorPane.leftAnchor="202.0" AnchorPane.topAnchor="105.0">
-         <font>
-            <Font name="System Bold" size="37.0" />
-         </font>
-      </Label>
-      <Label layoutX="284.0" layoutY="235.0" text="User Name:" textFill="WHITE" AnchorPane.leftAnchor="284.0" AnchorPane.topAnchor="235.0">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-
-
-      <RadioButton fx:id="mButton" layoutX="460.0" layoutY="517.0" mnemonicParsing="false" onAction="#getGender" text="Male" textFill="#f8e800" />
-      <RadioButton fx:id="fButton" layoutX="589.0" layoutY="518.0" mnemonicParsing="false" onAction="#getGender" text="Female" textFill="#f8e800" />
-      <Label layoutX="539.0" layoutY="515.0" prefHeight="27.0" prefWidth="37.0" text="Or" textFill="WHITE">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <TextField fx:id="phoneNumberField" layoutX="447.0" layoutY="365.0" prefHeight="66.0" prefWidth="512.0" promptText="Enter Phone Number" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="365.0">
-         <padding>
-            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-         </padding>
-         <font>
-            <Font size="24.0" />
-         </font>
-      </TextField>
-      <Label layoutX="300.0" layoutY="381.0" prefHeight="35.0" prefWidth="132.0" text="Phone No:" textFill="WHITE">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
+        <!-- Back Button -->
+        <Label layoutX="508.0" layoutY="635.0" text="Already Have an Account?" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="backButton" layoutX="683.0" layoutY="624.0" onAction="#handleBack" prefHeight="50.0" prefWidth="120.0" stylesheets="@application.css" text="Sign In" AnchorPane.leftAnchor="683.0" AnchorPane.topAnchor="624.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+         <styleClass>
+            <String fx:value="ButtonSS" />
+            <String fx:value="tButton" />
+         </styleClass>
+        </Button>
 
     </children>
 </AnchorPane>

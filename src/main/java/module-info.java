@@ -11,6 +11,7 @@ module com.raven.demoproject {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.desktop;
+    requires java.sql;
 
     opens com.raven.demoproject to javafx.fxml;
     exports com.raven.demoproject;

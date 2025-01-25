@@ -115,7 +115,7 @@
         <!-- Navigation Buttons -->
         <Button fx:id="Profile" layoutX="64.0" layoutY="203.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="204.0" style="-fx-alignment: left;" styleClass="button-control-profile" stylesheets="@application.css" text="Profile" textFill="#f4bf4f" />
         <Button fx:id="DashBoard" layoutX="64.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleDashBoard" prefHeight="41.0" prefWidth="204.0" style="-fx-alignment: left;" styleClass="button-control-profile-off" stylesheets="@application.css" text="Dash Board" textFill="#f4bf4f" />
-        <Button fx:id="Devices" layoutX="64.0" layoutY="405.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="204.0" style="-fx-alignment: left;" styleClass="button-control-profile-off" stylesheets="@application.css" text="Devices" textFill="#f4bf4f" />
+        <Button fx:id="Devices" layoutX="64.0" layoutY="405.0" mnemonicParsing="false" onAction="#handleDevices"  prefHeight="41.0" prefWidth="204.0" style="-fx-alignment: left;" styleClass="button-control-profile-off" stylesheets="@application.css" text="Devices" textFill="#f4bf4f" />
         <Button fx:id="chatBox" layoutY="639.0" mnemonicParsing="false" onAction="#handleChatButtonAction" onMouseClicked="#handleChatButtonAction" prefHeight="53.0" prefWidth="59.0" styleClass="Button-Chat-box" stylesheets="@application.css" text="Chat" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="640.0">
             <cursor>
                 <Cursor fx:constant="HAND" />
