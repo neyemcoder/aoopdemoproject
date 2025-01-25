@@ -17,51 +17,73 @@
         <ImageView fx:id="backgroundImage" fitHeight="768.0" fitWidth="1366.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <image>
                 <Image url="@raven.jpg" />
-            </image></ImageView>
+            </image>
+        </ImageView>
+
+        <!-- Main Background Rectangle -->
         <Rectangle arcHeight="90.0" arcWidth="90.0" fill="#0c1f2fd4" height="582.0" layoutX="135.0" layoutY="86.0" opacity="0.81" stroke="#0f143c" strokeType="INSIDE" strokeWidth="0.0" width="1095.0" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="136.0" AnchorPane.topAnchor="93.0">
             <cursor>
                 <Cursor fx:constant="DEFAULT" />
             </cursor>
         </Rectangle>
+
+        <!-- Email Label -->
+        <Label layoutX="340.0" layoutY="304.0" text="Email:" textFill="WHITE" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="304.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+
+        <!-- Email TextField -->
         <TextField fx:id="usernameField" layoutX="447.0" layoutY="304.0" prefHeight="54.0" prefWidth="501.0" promptText="Enter Email" styleClass="text-field" stylesheets="@application.css" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="304.0">
             <padding>
                 <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
             </padding>
             <font>
                 <Font size="24.0" />
-            </font></TextField>
-        <Label layoutX="349.0" layoutY="319.0" text="Email:" textFill="WHITE" AnchorPane.leftAnchor="349.0" AnchorPane.topAnchor="438.0">
+            </font>
+        </TextField>
+
+        <!-- Password Label -->
+        <Label layoutX="294.0" layoutY="438.0" text="Password:" textFill="WHITE" AnchorPane.leftAnchor="294.0" AnchorPane.topAnchor="438.0">
             <font>
                 <Font size="24.0" />
-            </font></Label>
-        <Label layoutX="307.0" layoutY="449.0" prefHeight="41.0" prefWidth="120.0" text="Password:" textFill="#fffbfb" AnchorPane.leftAnchor="307.0" AnchorPane.topAnchor="304.0">
-            <font>
-                <Font size="24.0" />
-            </font></Label>
+            </font>
+        </Label>
+
+        <!-- Password PasswordField -->
         <PasswordField fx:id="passwordField" layoutX="447.0" layoutY="438.0" prefHeight="54.0" prefWidth="501.0" promptText="Enter Password" styleClass="text-field" stylesheets="@application.css" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="438.0">
             <padding>
                 <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
             </padding>
             <font>
                 <Font size="24.0" />
-            </font></PasswordField>
+            </font>
+        </PasswordField>
 
-<!--        sign-in or sign-up-->
+        <!-- Sign Up Button -->
         <Button fx:id="signUpButton" layoutX="734.0" layoutY="620.0" onAction="#handleSignUp" onMouseClicked="#handleSignUp" prefHeight="25.0" prefWidth="58.0" styleClass="tButton" stylesheets="@application.css" text="Sign Up" AnchorPane.leftAnchor="734.0" AnchorPane.topAnchor="620.0">
             <cursor>
                 <Cursor fx:constant="HAND" />
-            </cursor></Button>
+            </cursor>
+        </Button>
+
+        <!-- Sign In Button -->
         <Button fx:id="signInButton" layoutX="447.0" layoutY="561.0" onAction="#handleSignIn" onMouseClicked="#handleSignIn" prefHeight="25.0" prefWidth="501.0" styleClass="ButtonSS" stylesheets="@application.css" text="Sign In" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="561.0">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
         </Button>
-        <Label layoutX="566.0" layoutY="616.0" prefHeight="35.0" prefWidth="176.0" text="Create an Account?" textFill="WHITE" AnchorPane.leftAnchor="566.0" AnchorPane.topAnchor="616.0">
+
+        <!-- Create Account Prompt -->
+        <Label layoutX="566.0" layoutY="616.0" text="Create an Account?" textFill="WHITE" AnchorPane.leftAnchor="566.0" AnchorPane.topAnchor="616.0">
             <font>
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label layoutX="294.0" layoutY="176.0" prefHeight="118.0" prefWidth="153.0" text="Sign In" textFill="WHITE" AnchorPane.leftAnchor="294.0" AnchorPane.topAnchor="176.0">
+
+        <!-- Sign In Title -->
+        <Label layoutX="294.0" layoutY="176.0" text="Sign In" textFill="WHITE" AnchorPane.leftAnchor="294.0" AnchorPane.topAnchor="176.0">
             <font>
                 <Font name="System Bold" size="37.0" />
             </font>
