@@ -2,22 +2,39 @@ package com.raven.demoproject;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class DatabaseConnection {
-    private static final String URL = "jdbc:mysql://localhost:3306/revansquad?useSSL=false&allowPublicKeyRetrieval=true";
-    private static final String USER = "nayem"; // Replace with your DB username
-    private static final String PASSWORD = "12345678"; // Replace with your DB password
 
-    String dbUsername = "nayem";
-    String dbPassword = "12345678";
-    // Method to establish and return the database connection
-    public static Connection getConnection() {
-        try {
-            return DriverManager.getConnection(URL, USER, PASSWORD);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return null; // Return null if connection fails
-        }
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/ravensquad";
+    private static final String DB_USERNAME = "nayem";
+    private static final String DB_PASSWORD = "12345678";
+
+    // Establish connection to the database
+    public static Connection getConnection() throws Exception {
+        return DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+    }
+
+    // Fetch user data by email
+    public static ResultSet getUserByEmail(String email) throws Exception {
+        String query = "SELECT name, email, phone, gender FROM users2 WHERE email = ?";
+        Connection connection = getConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setString(1, email);
+        return preparedStatement.executeQuery();
+    }
+
+    // Save user data (this can be used for the signup functionality)
+    public static void saveUser(String name, String email, String phone, String gender, String password) throws Exception {
+        String query = "INSERT INTO users2 (name, email, phone, gender, password) VALUES (?, ?, ?, ?, ?)";
+        Connection connection = getConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setString(1, name);
+        preparedStatement.setString(2, email);
+        preparedStatement.setString(3, phone);
+        preparedStatement.setString(4, gender);
+        preparedStatement.setString(5, password);
+        preparedStatement.executeUpdate();
     }
 }

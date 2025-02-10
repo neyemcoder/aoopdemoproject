@@ -4,13 +4,20 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane  xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.raven.demoproject.ClientController">
-    <Label text="Client Application" layoutX="10.0" layoutY="10.0" style="-fx-font-size: 18px;"/>
-    <TextField fx:id="nameField" layoutX="10.0" layoutY="40.0" promptText="Enter your name"/>
-    <Button fx:id="connectButton" text="Connect to Server" layoutX="10.0" layoutY="80.0" onAction="#connectToServer"/>
-    <ListView fx:id="messageList" layoutX="10.0" layoutY="120.0" prefHeight="200.0" prefWidth="280.0"/>
-    <TextField fx:id="messageField" layoutX="10.0" layoutY="330.0" promptText="Enter message"/>
-    <Button text="Send" layoutX="240.0" layoutY="370.0" onAction="#sendMessage"/>
+<AnchorPane style="-fx-background-color: Yellow;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.raven.demoproject.ClientController">
+   <ImageView fitHeight="55.0" fitWidth="50.0" layoutX="212.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@chatbox.png" />
+      </image>
+   </ImageView>
+    <Label layoutX="10.0" layoutY="10.0" style="-fx-font-size: 18px;" text="User" />
+    <TextField fx:id="nameField" layoutX="10.0" layoutY="40.0" promptText="Enter your name" />
+    <Button fx:id="connectButton" layoutX="10.0" layoutY="80.0" onAction="#connectToServer" styleClass="ButtonSS" stylesheets="@application.css" text="Connect to Admin" />
+    <ListView fx:id="messageList" layoutX="2.0" layoutY="120.0" prefHeight="200.0" prefWidth="280.0" />
+    <TextField fx:id="messageField" layoutX="10.0" layoutY="330.0" promptText="Enter message" />
+    <Button layoutX="240.0" layoutY="362.0" onAction="#sendMessage" styleClass="ButtonSS" stylesheets="@application.css" text="Send" />
 </AnchorPane>

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -9,84 +7,37 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.raven.demoproject.signInController">
+<AnchorPane fx:id="rootPane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.raven.demoproject.LoginController">
     <children>
-        <ImageView fx:id="backgroundImage" fitHeight="768.0" fitWidth="1366.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <!-- Background Image -->
+        <ImageView fitHeight="768.0" fitWidth="1366.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <image>
                 <Image url="@raven.jpg" />
             </image>
         </ImageView>
 
-        <!-- Main Background Rectangle -->
-        <Rectangle arcHeight="90.0" arcWidth="90.0" fill="#0c1f2fd4" height="582.0" layoutX="135.0" layoutY="86.0" opacity="0.81" stroke="#0f143c" strokeType="INSIDE" strokeWidth="0.0" width="1095.0" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="136.0" AnchorPane.topAnchor="93.0">
-            <cursor>
-                <Cursor fx:constant="DEFAULT" />
-            </cursor>
-        </Rectangle>
+        <VBox alignment="CENTER" spacing="15" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="150.0">
+            <children>
+                <Label style="-fx-font-size: 24; -fx-font-weight: bold;" text="Login" textFill="#95ae49" />
 
-        <!-- Email Label -->
-        <Label layoutX="340.0" layoutY="304.0" text="Email:" textFill="WHITE" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="304.0">
-            <font>
-                <Font size="24.0" />
-            </font>
-        </Label>
+                <TextField fx:id="emailField" promptText="Email" style="-fx-padding: 10; -fx-font-size: 14;" />
+                <PasswordField fx:id="passwordField" promptText="Password" style="-fx-padding: 10; -fx-font-size: 14;" />
 
-        <!-- Email TextField -->
-        <TextField fx:id="usernameField" layoutX="447.0" layoutY="304.0" prefHeight="54.0" prefWidth="501.0" promptText="Enter Email" styleClass="text-field" stylesheets="@application.css" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="304.0">
-            <padding>
-                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-            </padding>
-            <font>
-                <Font size="24.0" />
-            </font>
-        </TextField>
+                <Label fx:id="errorLabel" style="-fx-font-size: 12;" textFill="red" />
+            </children>
+        </VBox>
 
-        <!-- Password Label -->
-        <Label layoutX="294.0" layoutY="438.0" text="Password:" textFill="WHITE" AnchorPane.leftAnchor="294.0" AnchorPane.topAnchor="438.0">
-            <font>
-                <Font size="24.0" />
-            </font>
-        </Label>
+          <Button layoutX="496.0" layoutY="400.0" onAction="#handleLogin" prefHeight="40.0" prefWidth="374.0" style="-fx-font-size: 14; -fx-padding: 10;" styleClass="ButtonSS" stylesheets="@application.css" text="Login" />
+      <Button layoutX="496.0" layoutY="548.0" onAction="#handleSignUp" prefHeight="40.0" prefWidth="374.0" style="-fx-font-size: 14; -fx-padding: 10;" styleClass="ButtonSS" stylesheets="@application.css" text="SignUp" />
+      <Label layoutX="582.0" layoutY="482.0" prefHeight="35.0" prefWidth="180.0" style="-fx-font-size: 24; -fx-font-weight: bold;" text="Create Profile?" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
 
-        <!-- Password PasswordField -->
-        <PasswordField fx:id="passwordField" layoutX="447.0" layoutY="438.0" prefHeight="54.0" prefWidth="501.0" promptText="Enter Password" styleClass="text-field" stylesheets="@application.css" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="438.0">
-            <padding>
-                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-            </padding>
-            <font>
-                <Font size="24.0" />
-            </font>
-        </PasswordField>
-
-        <!-- Sign Up Button -->
-        <Button fx:id="signUpButton" layoutX="734.0" layoutY="620.0" onAction="#handleSignUp" onMouseClicked="#handleSignUp" prefHeight="25.0" prefWidth="58.0" styleClass="tButton" stylesheets="@application.css" text="Sign Up" AnchorPane.leftAnchor="734.0" AnchorPane.topAnchor="620.0">
-            <cursor>
-                <Cursor fx:constant="HAND" />
-            </cursor>
-        </Button>
-
-        <!-- Sign In Button -->
-        <Button fx:id="signInButton" layoutX="447.0" layoutY="561.0" onAction="#handleSignIn" onMouseClicked="#handleSignIn" prefHeight="25.0" prefWidth="501.0" styleClass="ButtonSS" stylesheets="@application.css" text="Sign In" AnchorPane.leftAnchor="447.0" AnchorPane.topAnchor="561.0">
-            <cursor>
-                <Cursor fx:constant="HAND" />
-            </cursor>
-        </Button>
-
-        <!-- Create Account Prompt -->
-        <Label layoutX="566.0" layoutY="616.0" text="Create an Account?" textFill="WHITE" AnchorPane.leftAnchor="566.0" AnchorPane.topAnchor="616.0">
-            <font>
-                <Font size="18.0" />
-            </font>
-        </Label>
-
-        <!-- Sign In Title -->
-        <Label layoutX="294.0" layoutY="176.0" text="Sign In" textFill="WHITE" AnchorPane.leftAnchor="294.0" AnchorPane.topAnchor="176.0">
-            <font>
-                <Font name="System Bold" size="37.0" />
-            </font>
-        </Label>
     </children>
 </AnchorPane>

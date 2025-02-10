@@ -6,8 +6,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
+
+import javax.swing.text.html.ImageView;
 import java.io.IOException;
 
 public class  DevicesController {
@@ -25,6 +28,8 @@ public class  DevicesController {
 
     @FXML
     private Button RB1;
+
+
 
     private boolean isConnected = false;
 
@@ -59,6 +64,8 @@ public class  DevicesController {
             e.printStackTrace();
         }
     }
+
+
 
     // Method to handle Device button action
     public void handleDeviceAction(ActionEvent event) {

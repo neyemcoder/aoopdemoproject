@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
@@ -162,15 +163,20 @@ public class dashBoardController {
         // Ensure the rootPane can receive key events
         Platform.runLater(() -> {
             rootPane.requestFocus();
-
-            // Set key event handlers
-            rootPane.setOnKeyPressed(this::handleKeyPressed);
-            rootPane.setOnKeyReleased(this::handleKeyReleased);
         });
 
+        // Set key event handlers
+        rootPane.setOnKeyPressed(this::handleKeyPressed);
+        rootPane.setOnKeyReleased(this::handleKeyReleased);
+
         // Load content into WebViews as needed
-        webView1.getEngine().load("https://google.com");
-        webView2.getEngine().load("https://facebook.com");
-        webView3.getEngine().load("https://github.com");
-    }
+//        webView2.getEngine().load();
+        webView3.getEngine().load("/projectSimulator/src/index.html");
+
+        // Set custom user agent for webView1 and load a local URL
+//        WebEngine webEngine = webView1.getEngine(".src\\index.html");
+//        webEngine.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36");
+//        webEngine.load("http://localhost:1791/src/index.html"); // Change to your local URL
+//    }
+}
 }

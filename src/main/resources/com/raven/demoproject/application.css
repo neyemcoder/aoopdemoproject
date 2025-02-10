@@ -10,7 +10,7 @@
     -fx-background-radius: 5;
 }
 .tButton{
-    -fx-text-fill:  F4BF4F ;
+    -fx-text-fill: #ffc500;
     -fx-background-color: rgba(10, 76, 133, 0.04),f rgba(10, 76, 133, 0.04);
 }
 .Button_buyCredit
@@ -33,7 +33,7 @@
 .button-control-profile
 {
     -fx-font-family: "Lato Bold ";
-    -fx-text-fill: F4BF4F;
+    -fx-text-fill: #f6c151;
     -fx-background-color: rgba(10, 76, 133, 0.15);
     -fx-background-radius: 15;
     -fx-text-alignment: left;
@@ -42,7 +42,7 @@
 .button-control-profile-off
 {
     -fx-font-family: "Lato Bold ";
-    -fx-text-fill: F4BF4F;
+    -fx-text-fill: #f6c151;
     -fx-background-color: rgba(10, 76, 133, 0);
     -fx-background-radius: 15;
     -fx-text-alignment: left;
